@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="shop">
 	<head>
 		<meta charset="utf8">
 		<meta name="viewport" content="width:device-width, initial-scale=1">
 		<title>Orlando City</title>
 		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/orlando.css">
+		<link rel="stylesheet" href="lib/raty/lib/jquery.raty.css">
 		<link rel="stylesheet" href="css/orlando-mobile.css">
 		<link rel="stylesheet" href="lib/owlcarousel2/dist/assets/owl.carousel.min.css">
-		<link rel="stylesheet" href="lib/owlcarousel2/dist/assets/owl.theme.default.min.css">  
+		<link rel="stylesheet" href="lib/owlcarousel2/dist/assets/owl.theme.default.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<script src="lib/angularjs/angular.min.js"></script>
 	</head>
 <body>
 

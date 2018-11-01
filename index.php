@@ -1,6 +1,7 @@
 <?php
 
 require 'inc/Slim-2.x/Slim/Slim.php';
+require 'inc/configuration.php';
 
 \Slim\Slim::registerAutoloader();
 
@@ -18,12 +19,45 @@ $app->get(
 );
 
 $app->get(
-    'videos',
+    '/videos',
     function () {
 
     	require_once("view/videos.php");
 
     }
 );
+
+$app->get(
+    '/home',
+    function () {
+
+    	require_once("view/index.php");
+
+    }
+);
+
+$app->get(
+    '/shop',
+    function () {
+
+    	require_once("view/shop.php");
+
+    }
+);
+
+$app->get(
+    '/produtos',
+    function () {
+
+        $sql = new Sql();
+
+        $data = $sql->select("SELECT * FROM tb_produtos where preco_promorcional > 0 order by preco_promorcional desc limit 3;");
+                            //SELECT * FROM tb_produtos where preco_promorcional > 0 order by preco_promorcional desc limit 3;
+                            //SELECT * FROM tb_produtos where preco_promorcional > 0 order by preco_promorcional desc limit 3;
+                            //SELECT * FROM hcode_shop.tb_produtos where preco_promorcional >0 order by preco_promorcional desc limit 3;
+        echo json_encode($data);
+
+});
+
 
 $app->run();
